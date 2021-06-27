@@ -16,10 +16,10 @@ static napi_value js_optarg_getter(napi_env env, napi_callback_info info) {
   napi_value nil;
   napi_value optarg_str;
 #ifdef _WIN32
-  napi_status s;
+  /* napi_status s;
   int len;
   unsigned short* optargw;
-  char* optarga;
+  char* optarga; */
 #endif
 
   if (optarg == NULL) {
@@ -135,6 +135,7 @@ static napi_value js_getopt(napi_env env, napi_callback_info info) {
   napi_status s;
   napi_valuetype valuetype0;
   bool is_array;
+  int32_t x = 0;
   int32_t c_argc = 0;
   char** c_argv = NULL;
   void* args = NULL;
@@ -243,6 +244,11 @@ static napi_value js_getopt(napi_env env, napi_callback_info info) {
   r = getopt((int)c_argc, c_argv, shortopts);
   free(shortopts);
   NAPI_CALL(env, napi_create_int32(env, (int32_t)r, &getopt_rs));
+  for (x = 0; x < c_argc; x++) {
+    napi_value arg;
+    NAPI_CALL(env, napi_create_string_utf8(env, *(c_argv + x), NAPI_AUTO_LENGTH, &arg));
+    NAPI_CALL(env, napi_set_element(env, argv[1], x, arg));
+  }
   return getopt_rs;
 }
 

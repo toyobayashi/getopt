@@ -5,8 +5,7 @@ module.exports = {
       name: 'getopt',
       type: 'dll',
       sources: [
-        './src/getopt.c',
-        './src/getopt1.c',
+        './src/getopt.c'
       ],
       defines: ['GETOPT_BUILD_DLL'],
       

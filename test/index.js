@@ -14,7 +14,6 @@ function main(argc, argv) {
   let digit_optind = 0
   let aopt = 0, bopt = 0
   let copt = null, dopt = null
-  printf("option ? with value '%s'\n", binding.optarg === null ? '(null)' : binding.optarg)
   while ((c = binding.getopt(argc, argv, "abc:d:012")) !== -1) {
     let this_option_optind = binding.optind ? binding.optind : 1
     const char = String.fromCharCode(c)
@@ -55,6 +54,11 @@ function main(argc, argv) {
       printf("%s ", argv[binding.optind++])
     printf("\n")
   }
+  printf("argv: ");
+  for (let i = 0; i < argc; i++) {  
+    printf("%s ", argv[i]);  
+  }
+  printf("\n");
   exit(0)
 }
 
