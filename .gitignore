@@ -1,0 +1,6 @@
+.cgenbuild
+node_modules
+/dist
+/build
+CMakeLists.txt
+.DS_Store

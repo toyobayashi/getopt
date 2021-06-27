@@ -1,0 +1,8 @@
+.cgenbuild
+.vscode
+/build
+/dist
+/test
+cgen.*
+CMakeLists.txt
+.DS_Store

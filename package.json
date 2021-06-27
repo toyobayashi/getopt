@@ -1,0 +1,36 @@
+{
+  "name": "@tybys/getopt",
+  "version": "2.33.10000",
+  "description": "GNU getopt",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "configure": "cgen configure",
+    "configure:debug": "cgen configure --debug",
+    "build": "cgen build",
+    "build:debug": "cgen build --debug",
+    "clean": "cgen clean",
+    "rebuild": "cgen rebuild",
+    "rebuild:debug": "cgen rebuild --debug"
+  },
+  "keywords": [
+    "getopt",
+    "argv",
+    "parser"
+  ],
+  "author": "toyobayashi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyobayashi/getopt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toyobayashi/getopt/issues"
+  },
+  "homepage": "https://github.com/toyobayashi/getopt#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@tybys/cgen": "^0.7.1"
+  }
+}
