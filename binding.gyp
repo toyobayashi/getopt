@@ -2,8 +2,11 @@
   "targets": [
     {
       "target_name": "getopt",
+      'includes': [
+        './common.gypi'
+      ],
       "sources": [
-        "src/binding.c",
+        "src/binding.cpp",
         "src/getopt.c"
       ]
     },

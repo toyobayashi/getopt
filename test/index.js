@@ -24,7 +24,7 @@ function main(argc, argv) {
         if (digit_optind != 0 && digit_optind != this_option_optind)
           printf("digits occur in two different argv-elements.\n")
         digit_optind = this_option_optind
-        printf("option %c\n", c)
+        printf("option %s\n", char)
         break
       case 'a':
         printf("option a\n")
