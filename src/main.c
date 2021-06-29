@@ -1,7 +1,7 @@
 #include <stdio.h>  /* for printf */
 #include <stdlib.h> /* for exit */
 #include "getopt.h" /* for getopt_long; POSIX standard getopt is in unistd.h */
-/* int main(int argc, char** argv) {
+int main(int argc, char** argv) {
   int c;
   int digit_optind = 0;
   int aopt = 0, bopt = 0;
@@ -69,9 +69,9 @@
   }
   printf("\n");
   exit(0);
-} */
+}
 
-int main(int argc, char** argv) {
+/* int main(int argc, char** argv) {
   int c;
   int digit_optind = 0;
   int aopt = 0, bopt = 0;
@@ -121,4 +121,4 @@ int main(int argc, char** argv) {
   }
   printf("\n");
   exit(0);
-}
+} */

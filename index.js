@@ -9,12 +9,11 @@ class Option {
      */
     this.has_arg = hasArg || 0
     /** @type {null | { value: number }} */
-    this.flag = flag
+    this.flag = flag || null
     /** @type {number} */
-    this.val = val
+    this.val = (typeof val === 'string' ? val.charCodeAt(0) : val) || 0
   }
 };
-
 
 module.exports = require('./dist/getopt.node')
 
@@ -22,5 +21,5 @@ Object.defineProperties(module.exports, {
   no_argument: { enumerable: true, value: 0 },
   required_argument: { enumerable: true, value: 1 },
   optional_argument: { enumerable: true, value: 2 },
-  Option: Option
+  Option: { enumerable: true, value: Option }
 })
